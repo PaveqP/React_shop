@@ -1,4 +1,5 @@
-import React from 'react'
+import './styles.css'
+import React, { useEffect } from 'react'
 
 function CsItem(props) {
 
@@ -6,12 +7,12 @@ function CsItem(props) {
         id, 
         back, 
         name, 
+        price,
         addItem = Function.prototype,
     } = props;
+    
 
-    let price = Math.floor(Math.random() * 50001)
-
-    return <div className="card" id={id}>
+    return  <div className="card" id={id}>
                 <div className="card-image">
                     <img src={back} alt={name}/>
                     
@@ -31,6 +32,6 @@ function CsItem(props) {
                     <span className="right" style={{fontSize: '2rem'}}>{price} руб.</span>
                 </div>
             </div>
-}
+    }
 
 export {CsItem};

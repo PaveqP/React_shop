@@ -17,6 +17,7 @@ function Shop(props) {
     const [order, setOrder] = useState([]);
     const [isBasketShow, setBasketShow] = useState(false);
     const [alertName, setAlertName] = useState('');
+    const [flag, setFlag] = useState(true)
 
     const getFortItems = () => {
         fetch(API_URL, {
@@ -49,9 +50,12 @@ function Shop(props) {
 
     useEffect(() =>  {
         getFortItems();
-        getCsItems();
-        console.log(items)
     }, []);
+
+    if (mode === 'csgo' && flag === true){
+        getCsItems();
+        setFlag(false)
+    }
 
     const addToBacket = (item) => {
         const itemIndex = order.findIndex(orderItem => orderItem.id === item.id)
