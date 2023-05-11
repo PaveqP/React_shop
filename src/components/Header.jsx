@@ -11,7 +11,7 @@ function Header(props) {
                     
                     <ul id="nav-mobile" className="right">
                         <li className="separator"></li>
-                        <li onClick={() => setMode('fortnite')}><a href="sass.html">fortnite</a></li>
+                        <li onClick={() => setMode('fortnite')}><a href="/">fortnite</a></li>
                         <li onClick={() => setMode('csgo')}><a href="#">csgo</a></li>
                         <li><a href="https://github.com/PaveqP/React_shop">info</a></li>
                     </ul>

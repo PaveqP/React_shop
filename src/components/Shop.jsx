@@ -48,13 +48,17 @@ function Shop(props) {
         });
     }
 
-    useEffect(() =>  {
-        getFortItems();
-    }, []);
+    //useEffect(() =>  {
+        //getFortItems();
+    //}, []);
 
     if (mode === 'csgo' && flag === true){
         getCsItems();
-        setFlag(false)
+        //setFlag(false)
+    }
+    if (mode === 'fortnite' && flag === true){
+        getFortItems();
+        //setFlag(false)
     }
 
     const addToBacket = (item) => {
