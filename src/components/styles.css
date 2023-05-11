@@ -2,3 +2,27 @@
     transform: scale(1.02);
     border: 2px solid rgba(151, 21, 202, 0.2);
 }
+
+.nav-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.separator{
+    width: 2px;
+    height: 40px;
+    background-color: azure;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+}
