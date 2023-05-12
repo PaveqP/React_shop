@@ -17,7 +17,8 @@ function Shop(props) {
     const [order, setOrder] = useState([]);
     const [isBasketShow, setBasketShow] = useState(false);
     const [alertName, setAlertName] = useState('');
-    const [flag, setFlag] = useState(true)
+    const [csFlag, setCsFlag] = useState(true)
+    const [fortFlag, setFortFlag] = useState(true)
 
     const getFortItems = () => {
         fetch(API_URL, {
@@ -52,13 +53,13 @@ function Shop(props) {
         //getFortItems();
     //}, []);
 
-    if (mode === 'csgo' && flag === true){
-        getCsItems();
-        //setFlag(false)
+    if (mode === 'csgo' && csFlag === true){
+        getCsItems()
+        setCsFlag(false)
     }
-    if (mode === 'fortnite' && flag === true){
-        getFortItems();
-        //setFlag(false)
+    if (mode === 'fortnite' && fortFlag === true){
+        getFortItems()
+        setFortFlag(false)
     }
 
     const addToBacket = (item) => {
